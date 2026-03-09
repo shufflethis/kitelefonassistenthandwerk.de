@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KI Telefonassistent Handwerk | Kein Auftrag mehr verpasst</title>
+    <meta name="description" content="Der KI-Telefonassistent für Handwerksbetriebe: Nimmt Aufträge an während Sie auf der Baustelle sind. Dialekt-Erkennung, Notfall-Weiterleitung, DSGVO-konform.">
+    <meta name="keywords" content="KI Telefonassistent Handwerk, Telefonassistent Handwerker, KI Handwerksbetrieb, Anrufannahme Handwerk, Auftragsverwaltung KI">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="track by track GmbH">
+    <link rel="canonical" href="https://kitelefonassistenthandwerk.de/">
+    <meta property="og:title" content="KI Telefonassistent Handwerk | Kein Auftrag mehr verpasst">
+    <meta property="og:description" content="Der KI-Telefonassistent für Handwerksbetriebe: Nimmt Aufträge an während Sie auf der Baustelle sind. Dialekt-Erkennung, Notfall-Weiterleitung, DSGVO-konform.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kitelefonassistenthandwerk.de/">
+    <meta property="og:locale" content="de_DE">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KI Telefonassistent Handwerk | Kein Auftrag mehr verpasst">
+    <meta name="twitter:description" content="Der KI-Telefonassistent für Handwerksbetriebe: Nimmt Aufträge an während Sie auf der Baustelle sind.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D97706',
+                        accent: '#B45309',
+                        dark: '#1C1917',
+                        darkLight: '#292524',
+                        darkMid: '#44403C',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .gradient-border { border-image: linear-gradient(135deg, #D97706, #B45309) 1; }
+        .text-gradient { background: linear-gradient(135deg, #D97706, #FBBF24); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .glow { box-shadow: 0 0 30px rgba(217,119,6,0.15); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(217,119,6,0.2); }
+        @keyframes pulse-slow { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        .pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
+        .slider-thumb::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 24px; height: 24px; border-radius: 50%; background: #D97706; cursor: pointer; border: 3px solid #1C1917; }
+        .slider-thumb::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: #D97706; cursor: pointer; border: 3px solid #1C1917; }
+        .slider-thumb { -webkit-appearance: none; appearance: none; height: 6px; border-radius: 3px; background: linear-gradient(90deg, #D97706, #B45309); outline: none; }
+        details summary::-webkit-details-marker { display: none; }
+        details summary::marker { display: none; content: ""; }
+    </style>
+
+    <!-- Schema.org FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Wie funktioniert der KI-Telefonassistent für Handwerker?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Der KI-Telefonassistent nimmt Anrufe entgegen, wenn Sie auf der Baustelle sind oder nicht erreichbar sind. Er versteht Dialekte, erfasst Auftragsdaten wie Adresse, Problembeschreibung und Dringlichkeit und schickt Ihnen eine WhatsApp-Zusammenfassung. Bei Notfällen wie Rohrbruch oder Stromausfall leitet er den Anruf sofort weiter."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Versteht die KI auch Dialekt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, unser KI-Telefonassistent wurde speziell für den deutschsprachigen Raum trainiert und versteht Bayrisch, Schwäbisch, Sächsisch, Plattdeutsch und weitere Dialekte zuverlässig."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was kostet der KI-Telefonassistent?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die Kosten richten sich nach Ihrem Gewerk und Anrufvolumen. Nutzen Sie unseren ROI-Rechner auf der Seite, um zu sehen, wie schnell sich die Investition rechnet. Im Durchschnitt amortisiert sich der Assistent bereits ab dem ersten gewonnenen Auftrag pro Monat."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Ist der KI-Telefonassistent DSGVO-konform?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, vollständig. Alle Daten werden auf deutschen Servern verarbeitet und gespeichert. Die Anrufdaten werden verschlüsselt übertragen und nur so lange gespeichert, wie es für die Auftragsbearbeitung notwendig ist. Wir sind DSGVO-zertifiziert."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kann der Assistent Notfälle erkennen und weiterleiten?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, der KI-Telefonassistent erkennt automatisch Notfallsituationen wie Rohrbrüche, Stromausfälle, Gasgeruch oder Wasserschäden und leitet den Anruf sofort an Ihre hinterlegte Notfallnummer weiter."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Wie schnell ist der Assistent einsatzbereit?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Die Einrichtung dauert nur 15 Minuten. Sie richten eine Rufumleitung ein, passen die Begrüßung an Ihr Gewerk an, und schon nimmt der Assistent Ihre Anrufe entgegen. Kein IT-Wissen erforderlich."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Funktioniert der Assistent auch am Wochenende und abends?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, der KI-Telefonassistent ist 24 Stunden am Tag, 7 Tage die Woche erreichbar. Gerade Notfälle passieren oft außerhalb der Geschäftszeiten - dann ist Ihr Assistent für Ihre Kunden da."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Kann ich den Assistenten an meinen Kalender anbinden?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, der KI-Telefonassistent synchronisiert sich mit Google Calendar, Apple Kalender und Microsoft Outlook. Erfasste Termine werden automatisch in Ihren Kalender eingetragen, inklusive Kundenadresse und Auftragsbeschreibung."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Schema.org LocalBusiness -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "KI Telefonassistent Handwerk",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "KI-Telefonassistent speziell für Handwerksbetriebe. Nimmt Aufträge an, erkennt Dialekte und leitet Notfälle weiter.",
+        "provider": {
+            "@type": "Organization",
+            "name": "track by track GmbH",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Schliemannstr. 23",
+                "addressLocality": "Berlin",
+                "postalCode": "10437",
+                "addressCountry": "DE"
+            },
+            "telephone": "+49-30-403665430",
+            "email": "hi@kitelefonassistenthandwerk.de"
+        }
+    }
+    </script>
+</head>
+<body class="bg-dark text-stone-200 antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-dark/95 backdrop-blur-md z-50 border-b border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 sm:h-20">
+                <div class="flex items-center space-x-2">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 bg-primary rounded-lg flex items-center justify-center">
+                        <svg class="w-5 h-5 sm:w-6 sm:h-6 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    </div>
+                    <span class="text-lg sm:text-xl font-bold text-white">KI-Telefonassistent<span class="text-primary hidden sm:inline"> Handwerk</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#gewerke" class="text-stone-400 hover:text-primary transition-colors text-sm font-medium">Gewerke</a>
+                    <a href="#features" class="text-stone-400 hover:text-primary transition-colors text-sm font-medium">Features</a>
+                    <a href="#roi-rechner" class="text-stone-400 hover:text-primary transition-colors text-sm font-medium">ROI-Rechner</a>
+                    <a href="#faq" class="text-stone-400 hover:text-primary transition-colors text-sm font-medium">FAQ</a>
+                    <a href="tel:+4930403665430" class="bg-primary hover:bg-accent text-dark font-bold px-5 py-2.5 rounded-lg transition-colors text-sm">Jetzt anrufen</a>
+                </div>
+                <a href="tel:+4930403665430" class="md:hidden bg-primary hover:bg-accent text-dark font-bold px-4 py-2 rounded-lg transition-colors text-sm">Anrufen</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative pt-28 sm:pt-36 pb-16 sm:pb-24 overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-dark via-dark to-stone-900"></div>
+        <div class="absolute top-20 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-primary/3 rounded-full blur-3xl"></div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6 sm:mb-8">
+                    <span class="w-2 h-2 bg-green-500 rounded-full pulse-slow"></span>
+                    <span class="text-primary text-xs sm:text-sm font-semibold tracking-wide uppercase">24/7 erreichbar - auch auf der Baustelle</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-white leading-[1.1] tracking-tight mb-6">
+                    Auf der Baustelle und trotzdem <span class="text-gradient">jeden Auftrag</span> annehmen
+                </h1>
+                <p class="text-lg sm:text-xl md:text-2xl text-stone-400 mb-8 sm:mb-10 max-w-2xl mx-auto leading-relaxed">
+                    Der KI-Telefonassistent, der <strong class="text-stone-200">Dialekt versteht</strong> und <strong class="text-stone-200">Aufträge erfasst</strong> &mdash; während Sie arbeiten.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="tel:+4930403665430" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-primary hover:bg-accent text-dark font-bold px-8 py-4 rounded-xl transition-all text-lg shadow-lg shadow-primary/25 hover:shadow-primary/40">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span>Jetzt anrufen</span>
+                    </a>
+                    <a href="https://kirezeptionist.de/#konfigurator" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-stone-800 hover:bg-stone-700 text-white font-bold px-8 py-4 rounded-xl transition-all text-lg border border-stone-700">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        <span>Kostenlos testen</span>
+                    </a>
+                </div>
+                <div class="mt-10 sm:mt-14 flex flex-wrap items-center justify-center gap-6 sm:gap-8 text-sm text-stone-500">
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>DSGVO-konform</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Deutsche Server</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>In 15 Min. eingerichtet</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pain Points -->
+    <section class="py-16 sm:py-24 bg-stone-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Das Problem kennt jeder Handwerker</h2>
+                <p class="text-stone-400 text-lg max-w-2xl mx-auto">Während Sie auf der Baustelle Leistung bringen, gehen lukrative Aufträge an die Konkurrenz.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+                <div class="bg-dark border border-red-500/20 rounded-2xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                    </div>
+                    <div class="text-5xl font-black text-red-500 mb-3">62%</div>
+                    <p class="text-stone-300 text-lg font-medium">der Aufträge gehen an den Handwerker, der <strong class="text-white">zuerst rangeht</strong></p>
+                </div>
+                <div class="bg-dark border border-red-500/20 rounded-2xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 8l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M5 3a2 2 0 00-2 2v1c0 8.284 6.716 15 15 15h1a2 2 0 002-2v-3.28a1 1 0 00-.684-.948l-4.493-1.498a1 1 0 00-1.21.502l-1.13 2.257a11.042 11.042 0 01-5.516-5.516l2.257-1.13a1 1 0 00.502-1.21L9.228 3.683A1 1 0 008.279 3H5z"></path></svg>
+                    </div>
+                    <div class="text-5xl font-black text-red-500 mb-3">&empty; 8</div>
+                    <p class="text-stone-300 text-lg font-medium">verpasste Anrufe <strong class="text-white">pro Tag</strong> auf der Baustelle</p>
+                </div>
+                <div class="bg-dark border border-red-500/20 rounded-2xl p-8 text-center card-hover">
+                    <div class="w-16 h-16 bg-red-500/10 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <div class="text-5xl font-black text-red-500 mb-3">850&euro;</div>
+                    <p class="text-stone-300 text-lg font-medium">entgangener Umsatz pro <strong class="text-white">verpasstem Anruf</strong></p>
+                </div>
+            </div>
+            <div class="text-center mt-10">
+                <div class="inline-flex items-center space-x-2 bg-primary/10 border border-primary/30 rounded-xl px-6 py-3">
+                    <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    <span class="text-primary font-semibold">Das sind bis zu <strong class="text-white">6.800 &euro; entgangener Umsatz</strong> pro Tag</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gewerke Grid -->
+    <section id="gewerke" class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Für jedes Gewerk</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">Spezialisiert auf Ihr Handwerk</h2>
+                <p class="text-stone-400 text-lg max-w-2xl mx-auto">Unser KI-Assistent kennt die Fachbegriffe und Anforderungen Ihres Gewerks.</p>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                <!-- Elektriker -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Elektriker</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Stromausfall-Notdienst sofort weiterleiten</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Smart-Home-Anfragen kategorisieren</span></li>
+                    </ul>
+                </div>
+                <!-- Klempner/Sanitär -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Klempner / Sanit&auml;r</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Rohrbruch-Notf&auml;lle priorisieren</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Wasserz&auml;hlerstand erfassen</span></li>
+                    </ul>
+                </div>
+                <!-- Dachdecker -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Dachdecker</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Sturmsch&auml;den als Notfall erkennen</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Dachfl&auml;che und Material abfragen</span></li>
+                    </ul>
+                </div>
+                <!-- Maler -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Maler</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Raumgr&ouml;&szlig;en und Fl&auml;chen erfassen</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Innen-/Au&szlig;enarbeiten unterscheiden</span></li>
+                    </ul>
+                </div>
+                <!-- Schreiner/Tischler -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Schreiner / Tischler</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Ma&szlig;e und Holzarten abfragen</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Anfertigungs- vs. Reparaturauftrag</span></li>
+                    </ul>
+                </div>
+                <!-- Heizungsbauer -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Heizungsbauer</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Heizungsausfall im Winter priorisieren</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Heizungstyp und Baujahr erfassen</span></li>
+                    </ul>
+                </div>
+                <!-- Fliesenleger -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Fliesenleger</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Quadratmeterzahl abfragen</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Neubau oder Sanierung unterscheiden</span></li>
+                    </ul>
+                </div>
+                <!-- Maurer -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Maurer</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Projektumfang und Bauphase erfassen</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Statik-relevante Anfragen markieren</span></li>
+                    </ul>
+                </div>
+                <!-- Zimmerer -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Zimmerer</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Dachstuhl- und Holzbauanfragen filtern</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Aufma&szlig;termine koordinieren</span></li>
+                    </ul>
+                </div>
+                <!-- Schlosser -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Schlosser</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>T&uuml;r&ouml;ffnungs-Notdienst priorisieren</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Metallbau-Projekte erfassen</span></li>
+                    </ul>
+                </div>
+                <!-- Glaser -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Glaser</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Glasbruch-Notf&auml;lle sofort melden</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Fensterma&szlig;e und Glasart abfragen</span></li>
+                    </ul>
+                </div>
+                <!-- Gebäudereinigung -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-5 sm:p-6 card-hover group">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-lg mb-2">Geb&auml;udereinigung</h3>
+                    <ul class="text-stone-400 text-sm space-y-1.5">
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Objekt- und Fl&auml;chengr&ouml;&szlig;e erfragen</span></li>
+                        <li class="flex items-start space-x-2"><svg class="w-4 h-4 text-primary mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Einmalig vs. Dauerauftrag abkl&auml;ren</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="py-16 sm:py-24 bg-stone-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Funktionen</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">Gebaut f&uuml;r den harten Alltag</h2>
+                <p class="text-stone-400 text-lg max-w-2xl mx-auto">Keine Spielerei, sondern Werkzeug. Funktionen, die auf der Baustelle z&auml;hlen.</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Dialekt -->
+                <div class="bg-dark border border-stone-800 rounded-2xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Dialekt-Erkennung</h3>
+                    <p class="text-stone-400 leading-relaxed mb-4">Versteht Ihre Kunden &mdash; egal ob Bayrisch, Schw&auml;bisch, S&auml;chsisch oder Platt. Trainiert auf echte Handwerkskunden-Gespr&auml;che.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs bg-darkLight text-stone-400 px-3 py-1 rounded-full border border-stone-700">Bayrisch</span>
+                        <span class="text-xs bg-darkLight text-stone-400 px-3 py-1 rounded-full border border-stone-700">Schw&auml;bisch</span>
+                        <span class="text-xs bg-darkLight text-stone-400 px-3 py-1 rounded-full border border-stone-700">S&auml;chsisch</span>
+                        <span class="text-xs bg-darkLight text-stone-400 px-3 py-1 rounded-full border border-stone-700">Platt</span>
+                    </div>
+                </div>
+                <!-- Auftragserfassung -->
+                <div class="bg-dark border border-stone-800 rounded-2xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Smarte Auftragserfassung</h3>
+                    <p class="text-stone-400 leading-relaxed">Erfasst automatisch Adresse, Problembeschreibung, Dringlichkeit und gew&uuml;nschten Termin. Strukturiert und sofort einsatzbereit.</p>
+                </div>
+                <!-- Notfall -->
+                <div class="bg-dark border border-stone-800 rounded-2xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Notfall-Weiterleitung</h3>
+                    <p class="text-stone-400 leading-relaxed">Rohrbruch, Stromausfall, Gasgeruch &mdash; echte Notf&auml;lle werden sofort erkannt und an Ihre Notfallnummer weitergeleitet. Keine Verz&ouml;gerung.</p>
+                </div>
+                <!-- Angebot-Nachfass -->
+                <div class="bg-dark border border-stone-800 rounded-2xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Automatischer Angebot-Nachfass</h3>
+                    <p class="text-stone-400 leading-relaxed">Kein Angebot bleibt unbeantwortet. Der Assistent fasst automatisch nach und erinnert Ihre Kunden an offene Angebote.</p>
+                </div>
+                <!-- WhatsApp -->
+                <div class="bg-dark border border-stone-800 rounded-2xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-green-500/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">WhatsApp-Zusammenfassung</h3>
+                    <p class="text-stone-400 leading-relaxed">Nach jedem Anruf erhalten Sie eine kompakte WhatsApp-Nachricht mit allen Details. Kein Notizblock, kein Vergessen.</p>
+                </div>
+                <!-- Kalender -->
+                <div class="bg-dark border border-stone-800 rounded-2xl p-8 card-hover">
+                    <div class="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-white font-bold text-xl mb-3">Kalender-Sync</h3>
+                    <p class="text-stone-400 leading-relaxed">Nahtlose Integration mit Google Calendar, Apple Kalender und Microsoft Outlook. Termine landen direkt in Ihrem Kalender.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI-Rechner -->
+    <section id="roi-rechner" class="py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">ROI-Rechner</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">Was kostet Sie jeder verpasste Anruf?</h2>
+                <p class="text-stone-400 text-lg max-w-2xl mx-auto">Berechnen Sie in Sekunden, wie viel Umsatz Ihnen durch verpasste Anrufe entgeht.</p>
+            </div>
+            <div class="bg-darkLight border border-stone-800 rounded-3xl p-6 sm:p-10 glow">
+                <div class="space-y-8">
+                    <!-- Verpasste Anrufe -->
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-white font-semibold text-lg">Verpasste Anrufe pro Tag</label>
+                            <span id="calls-value" class="text-primary font-bold text-2xl">8</span>
+                        </div>
+                        <input type="range" id="calls-slider" min="1" max="20" value="8" class="w-full slider-thumb cursor-pointer">
+                        <div class="flex justify-between text-stone-500 text-sm mt-1"><span>1</span><span>20</span></div>
+                    </div>
+                    <!-- Auftragswert -->
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-white font-semibold text-lg">Durchschn. Auftragswert</label>
+                            <span id="value-display" class="text-primary font-bold text-2xl"><span id="value-value">850</span> &euro;</span>
+                        </div>
+                        <input type="range" id="value-slider" min="200" max="5000" step="50" value="850" class="w-full slider-thumb cursor-pointer">
+                        <div class="flex justify-between text-stone-500 text-sm mt-1"><span>200 &euro;</span><span>5.000 &euro;</span></div>
+                    </div>
+                    <!-- Stundenlohn -->
+                    <div>
+                        <div class="flex justify-between items-center mb-3">
+                            <label class="text-white font-semibold text-lg">Stundenlohn Meister</label>
+                            <span id="hourly-display" class="text-primary font-bold text-2xl"><span id="hourly-value">55</span> &euro;/h</span>
+                        </div>
+                        <input type="range" id="hourly-slider" min="40" max="80" step="5" value="55" class="w-full slider-thumb cursor-pointer">
+                        <div class="flex justify-between text-stone-500 text-sm mt-1"><span>40 &euro;/h</span><span>80 &euro;/h</span></div>
+                    </div>
+
+                    <!-- Ergebnis -->
+                    <div class="border-t border-stone-700 pt-8 mt-8">
+                        <div class="grid sm:grid-cols-3 gap-6">
+                            <div class="bg-dark rounded-2xl p-6 text-center border border-red-500/20">
+                                <p class="text-stone-400 text-sm mb-2">Entgangener Umsatz / Monat</p>
+                                <p id="lost-revenue" class="text-3xl sm:text-4xl font-black text-red-500">0 &euro;</p>
+                            </div>
+                            <div class="bg-dark rounded-2xl p-6 text-center border border-green-500/20">
+                                <p class="text-stone-400 text-sm mb-2">Ihre Einsparung / Monat</p>
+                                <p id="savings" class="text-3xl sm:text-4xl font-black text-green-500">0 &euro;</p>
+                            </div>
+                            <div class="bg-dark rounded-2xl p-6 text-center border border-primary/30">
+                                <p class="text-stone-400 text-sm mb-2">Return on Investment</p>
+                                <p id="roi" class="text-3xl sm:text-4xl font-black text-primary">0x</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="https://kirezeptionist.de/#konfigurator" target="_blank" rel="noopener" class="inline-flex items-center space-x-3 bg-primary hover:bg-accent text-dark font-bold px-8 py-4 rounded-xl transition-all text-lg shadow-lg shadow-primary/25">
+                        <span>Jetzt konfigurieren &amp; testen</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geo-SEO -->
+    <section class="py-16 sm:py-24 bg-stone-900/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Bundesweit verf&uuml;gbar</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">KI-Telefonassistent f&uuml;r Handwerker in Ihrer Stadt</h2>
+                <p class="text-stone-400 text-lg max-w-2xl mx-auto">Egal wo Ihr Betrieb sitzt &mdash; unser KI-Telefonassistent spricht die Sprache Ihrer Kunden.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-3 sm:gap-4">
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Berlin</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent M&uuml;nchen</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Hamburg</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent K&ouml;ln</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Frankfurt</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Stuttgart</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent D&uuml;sseldorf</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Leipzig</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Dortmund</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Essen</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Bremen</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Dresden</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Hannover</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent N&uuml;rnberg</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Duisburg</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Bochum</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Wuppertal</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Bielefeld</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent Bonn</a>
+                <a href="#" class="bg-dark border border-stone-800 hover:border-primary/50 text-stone-300 hover:text-primary px-4 sm:px-5 py-2.5 rounded-xl text-sm font-medium transition-all">KI Telefonassistent M&uuml;nster</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Erfahrungen</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">Was Handwerker sagen</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-6 sm:gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-8 card-hover relative">
+                    <div class="absolute top-6 right-8 text-primary/20">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"></path></svg>
+                    </div>
+                    <div class="flex items-center space-x-1 mb-4">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-stone-300 leading-relaxed mb-6">&bdquo;Seit wir den KI-Assistenten haben, verpassen wir keinen Auftrag mehr. Letzte Woche hat er einen Gro&szlig;auftrag &uuml;ber 12.000&nbsp;&euro; angenommen, w&auml;hrend wir auf dem Dach waren. Das Teil zahlt sich hundertfach aus.&ldquo;</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold text-lg">MS</div>
+                        <div>
+                            <p class="text-white font-semibold">Markus S.</p>
+                            <p class="text-stone-500 text-sm">Elektrikermeister, M&uuml;nchen</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-8 card-hover relative">
+                    <div class="absolute top-6 right-8 text-primary/20">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"></path></svg>
+                    </div>
+                    <div class="flex items-center space-x-1 mb-4">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-stone-300 leading-relaxed mb-6">&bdquo;Meine Frau hat fr&uuml;her die Anrufe angenommen. Jetzt macht das die KI und meine Frau hat endlich Feierabend. Die WhatsApp-Zusammenfassungen sind top &mdash; ich wei&szlig; sofort, was Sache ist.&ldquo;</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold text-lg">TW</div>
+                        <div>
+                            <p class="text-white font-semibold">Thomas W.</p>
+                            <p class="text-stone-500 text-sm">Dachdeckerbetrieb, Hamburg</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-darkLight border border-stone-800 rounded-2xl p-8 card-hover relative">
+                    <div class="absolute top-6 right-8 text-primary/20">
+                        <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10H14.017zM0 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151C7.546 6.068 5.983 8.789 5.983 11H10v10H0z"></path></svg>
+                    </div>
+                    <div class="flex items-center space-x-1 mb-4">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-stone-300 leading-relaxed mb-6">&bdquo;Als SHK-Betrieb haben wir st&auml;ndig Notf&auml;lle. Der Assistent erkennt sofort, ob es ein Rohrbruch ist oder ein normaler Termin. Bei Notf&auml;llen klingelt mein Handy &mdash; alles andere bekomme ich per WhatsApp. Genial.&ldquo;</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center text-primary font-bold text-lg">AK</div>
+                        <div>
+                            <p class="text-white font-semibold">Andreas K.</p>
+                            <p class="text-stone-500 text-sm">SHK-Betrieb, K&ouml;ln</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 sm:py-24 bg-stone-900/50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 sm:mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">FAQ</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3 mb-4">H&auml;ufige Fragen</h2>
+            </div>
+            <div class="space-y-4">
+                <details class="bg-dark border border-stone-800 rounded-2xl group" open>
+                    <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-semibold text-lg hover:text-primary transition-colors list-none">
+                        <span>Wie funktioniert der KI-Telefonassistent f&uuml;r Handwerker?</span>
+                        <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-400 leading-relaxed">Der KI-Telefonassistent nimmt Anrufe entgegen, wenn Sie auf der Baustelle sind oder nicht erreichbar sind. Er versteht Dialekte, erfasst Auftragsdaten wie Adresse, Problembeschreibung und Dringlichkeit und schickt Ihnen eine WhatsApp-Zusammenfassung. Bei Notf&auml;llen wie Rohrbruch oder Stromausfall leitet er den Anruf sofort weiter.</div>
+                </details>
+                <details class="bg-dark border border-stone-800 rounded-2xl group">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-semibold text-lg hover:text-primary transition-colors list-none">
+                        <span>Versteht die KI auch Dialekt?</span>
+                        <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-400 leading-relaxed">Ja, unser KI-Telefonassistent wurde speziell f&uuml;r den deutschsprachigen Raum trainiert und versteht Bayrisch, Schw&auml;bisch, S&auml;chsisch, Plattdeutsch und weitere Dialekte zuverl&auml;ssig.</div>
+                </details>
+                <details class="bg-dark border border-stone-800 rounded-2xl group">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-semibold text-lg hover:text-primary transition-colors list-none">
+                        <span>Was kostet der KI-Telefonassistent?</span>
+                        <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-400 leading-relaxed">Die Kosten richten sich nach Ihrem Gewerk und Anrufvolumen. Nutzen Sie unseren ROI-Rechner auf der Seite, um zu sehen, wie schnell sich die Investition rechnet. Im Durchschnitt amortisiert sich der Assistent bereits ab dem ersten gewonnenen Auftrag pro Monat.</div>
+                </details>
+                <details class="bg-dark border border-stone-800 rounded-2xl group">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-semibold text-lg hover:text-primary transition-colors list-none">
+                        <span>Ist der KI-Telefonassistent DSGVO-konform?</span>
+                        <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-400 leading-relaxed">Ja, vollst&auml;ndig. Alle Daten werden auf deutschen Servern verarbeitet und gespeichert. Die Anrufdaten werden verschl&uuml;sselt &uuml;bertragen und nur so lange gespeichert, wie es f&uuml;r die Auftragsbearbeitung notwendig ist. Wir sind DSGVO-zertifiziert.</div>
+                </details>
+                <details class="bg-dark border border-stone-800 rounded-2xl group">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-semibold text-lg hover:text-primary transition-colors list-none">
+                        <span>Kann der Assistent Notf&auml;lle erkennen und weiterleiten?</span>
+                        <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-400 leading-relaxed">Ja, der KI-Telefonassistent erkennt automatisch Notfallsituationen wie Rohrbr&uuml;che, Stromausf&auml;lle, Gasgeruch oder Wassersch&auml;den und leitet den Anruf sofort an Ihre hinterlegte Notfallnummer weiter.</div>
+                </details>
+                <details class="bg-dark border border-stone-800 rounded-2xl group">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-semibold text-lg hover:text-primary transition-colors list-none">
+                        <span>Wie schnell ist der Assistent einsatzbereit?</span>
+                        <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-400 leading-relaxed">Die Einrichtung dauert nur 15 Minuten. Sie richten eine Rufumleitung ein, passen die Begr&uuml;&szlig;ung an Ihr Gewerk an, und schon nimmt der Assistent Ihre Anrufe entgegen. Kein IT-Wissen erforderlich.</div>
+                </details>
+                <details class="bg-dark border border-stone-800 rounded-2xl group">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-semibold text-lg hover:text-primary transition-colors list-none">
+                        <span>Funktioniert der Assistent auch am Wochenende und abends?</span>
+                        <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-400 leading-relaxed">Ja, der KI-Telefonassistent ist 24 Stunden am Tag, 7 Tage die Woche erreichbar. Gerade Notf&auml;lle passieren oft au&szlig;erhalb der Gesch&auml;ftszeiten &mdash; dann ist Ihr Assistent f&uuml;r Ihre Kunden da.</div>
+                </details>
+                <details class="bg-dark border border-stone-800 rounded-2xl group">
+                    <summary class="flex items-center justify-between cursor-pointer p-6 text-white font-semibold text-lg hover:text-primary transition-colors list-none">
+                        <span>Kann ich den Assistenten an meinen Kalender anbinden?</span>
+                        <svg class="w-5 h-5 shrink-0 ml-4 transition-transform group-open:rotate-180 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                    </summary>
+                    <div class="px-6 pb-6 text-stone-400 leading-relaxed">Ja, der KI-Telefonassistent synchronisiert sich mit Google Calendar, Apple Kalender und Microsoft Outlook. Erfasste Termine werden automatisch in Ihren Kalender eingetragen, inklusive Kundenadresse und Auftragsbeschreibung.</div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 sm:py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-gradient-to-br from-primary/10 to-accent/10 border border-primary/20 rounded-3xl p-8 sm:p-14">
+                <h2 class="text-3xl sm:text-4xl md:text-5xl font-black text-white mb-6">Schluss mit verpassten Auftr&auml;gen</h2>
+                <p class="text-stone-400 text-lg sm:text-xl mb-8 max-w-2xl mx-auto">Starten Sie in 15 Minuten &mdash; ohne IT-Kenntnisse, ohne Vertragsbindung. Ihr KI-Telefonassistent wartet.</p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="tel:+4930403665430" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-primary hover:bg-accent text-dark font-bold px-8 py-4 rounded-xl transition-all text-lg shadow-lg shadow-primary/25">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        <span>+49 30 403665430</span>
+                    </a>
+                    <a href="https://kirezeptionist.de/#konfigurator" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-stone-800 hover:bg-stone-700 text-white font-bold px-8 py-4 rounded-xl transition-all text-lg border border-stone-700">
+                        <span>Kostenlos testen</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Impressum -->
+    <footer class="bg-stone-900 border-t border-stone-800 py-12 sm:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8 sm:gap-12">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+                            <svg class="w-5 h-5 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                        </div>
+                        <span class="text-lg font-bold text-white">KI-Telefonassistent Handwerk</span>
+                    </div>
+                    <p class="text-stone-500 text-sm leading-relaxed">Der KI-Telefonassistent, der speziell f&uuml;r Handwerksbetriebe entwickelt wurde. Kein Auftrag mehr verpasst.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-4">Schnellzugriff</h4>
+                    <ul class="space-y-2 text-stone-500 text-sm">
+                        <li><a href="#gewerke" class="hover:text-primary transition-colors">Gewerke</a></li>
+                        <li><a href="#features" class="hover:text-primary transition-colors">Features</a></li>
+                        <li><a href="#roi-rechner" class="hover:text-primary transition-colors">ROI-Rechner</a></li>
+                        <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
+                    </ul>
+                </div>
+                <div id="impressum">
+                    <h4 class="text-white font-semibold mb-4">Impressum</h4>
+                    <div class="text-stone-500 text-sm space-y-1 leading-relaxed">
+                        <p class="font-medium text-stone-400">track by track GmbH</p>
+                        <p>Gesch&auml;ftsf&uuml;hrer: Tobias Sander</p>
+                        <p>Schliemannstr. 23, 10437 Berlin</p>
+                        <p class="pt-2">Tel: <a href="tel:+4930403665430" class="hover:text-primary transition-colors">+49-30-403665430</a></p>
+                        <p>E-Mail: <a href="mailto:hi@kitelefonassistenthandwerk.de" class="hover:text-primary transition-colors">hi@kitelefonassistenthandwerk.de</a></p>
+                        <p class="pt-2">HRB 129805 B, Amtsgericht Berlin-Charlottenburg</p>
+                        <p>USt-IdNr: DE814954842</p>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-stone-800 mt-10 pt-8 text-center text-stone-600 text-sm">
+                <p>&copy; 2026 track by track GmbH. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ROI Calculator Script -->
+    <script>
+        function calculateROI() {
+            const calls = parseInt(document.getElementById('calls-slider').value);
+            const avgValue = parseInt(document.getElementById('value-slider').value);
+            const hourlyRate = parseInt(document.getElementById('hourly-slider').value);
+
+            document.getElementById('calls-value').textContent = calls;
+            document.getElementById('value-value').textContent = avgValue.toLocaleString('de-DE');
+            document.getElementById('hourly-value').textContent = hourlyRate;
+
+            // Annahme: 30% der verpassten Anrufe wären Aufträge geworden, 22 Arbeitstage
+            const conversionRate = 0.30;
+            const workDays = 22;
+
+            const lostRevenue = Math.round(calls * avgValue * conversionRate * workDays);
+            // Kosten eines Assistenten ca. 199€/Monat, 70% der verlorenen Aufträge werden gerettet
+            const assistantCost = 199;
+            const recoveryRate = 0.70;
+            const savedRevenue = Math.round(lostRevenue * recoveryRate);
+            const savings = savedRevenue - assistantCost;
+            const roi = assistantCost > 0 ? (savedRevenue / assistantCost).toFixed(0) : 0;
+
+            document.getElementById('lost-revenue').textContent = lostRevenue.toLocaleString('de-DE') + ' \u20AC';
+            document.getElementById('savings').textContent = savings.toLocaleString('de-DE') + ' \u20AC';
+            document.getElementById('roi').textContent = roi + 'x';
+        }
+
+        document.getElementById('calls-slider').addEventListener('input', calculateROI);
+        document.getElementById('value-slider').addEventListener('input', calculateROI);
+        document.getElementById('hourly-slider').addEventListener('input', calculateROI);
+
+        // Initial calculation
+        calculateROI();
+    </script>
+
+</body>
+</html>
